@@ -29,29 +29,29 @@
 
 ## Naming Variables:
 - The general rules for constructing names for variables (unique identifiers) are:
- - Names can contain letters, digits, underscores, and dollar signs.
- - Names must begin with a letter.
- - Names can also begin with $ and _ (but we will not use it in this tutorial).
- - Names are case sensitive (y and Y are different variables).
- - Reserved words (like JavaScript keywords) cannot be used as names.
+    - Names can contain letters, digits, underscores, and dollar signs.
+    - Names must begin with a letter.
+    - Names can also begin with $ and _ (but we will not use it in this tutorial).
+    - Names are case sensitive (y and Y are different variables).
+    - Reserved words (like JavaScript keywords) cannot be used as names.
 
 ## JavaScript KeyWords:
-`abstract`    `arguments`   `await*`        `boolean`
-`break`	      `byte`	    `case`	        `catch`
-`char`	      `class*`	    `const`	        `continue`
-`debugger`    `default`     `delete`	    `do`
-`double`      `else`	    `enum*`	        `eval`
-`export*`     `extends*`	`false`	        `final`
-`finally`     `float`	    `for`	        `function`
-`goto`	      `if`	        `implements`	`import*`
-`in`	      `instanceof`  `int`	        `interface`
-`let*`	      `long`	    `native`	    `new`
-`null`	      `package`	    `private`	    `protected`
-`public`      `return`	    `short`	        `static`
-`super*`      `switch`	    `synchronized`	`this`
-`throw`	      `throws`	    `transient`	    `true`
-`try`	      `typeof`	    `var`	        `void`
-`volatile`    `while`	    `with`	        `yield`
+| `abstract` | `arguments` |  `await*` |        `boolean` |
+`break`	   |   `byte`	 |   `case`	  |     `catch` |
+`char`	|      `class*`	  |  `const`	  |      `continue` |
+`debugger` |  `default`  |   `delete`	    `do` |
+`double`   |   `else`	|    `enum*`	 |       `eval` |
+`export*`   |  `extends*` |	`false`	   |     `final` |
+`finally`   |  `float`	|    `for`	  |      `function` |
+`goto`	   |   `if`	     |   `implements`	|`import*` |
+`in`	 |     `instanceof` | `int`	    |    `interface` |
+`let*`	  |    `long`	  |  `native`	  |  `new` |
+`null`	  |    `package`	 |   `private`	 |   `protected` |
+`public`   |   `return`	 |  `short`	        `static` |
+`super*`  |   `switch`	|   `synchronized`	|`this` |
+`throw`	  |   `throws`	 |  `transient`	  | `true` |
+`try`	|     `typeof`	|   `var`	   |     `void` |
+`volatile`  |  `while`	  |  `with`	   |     `yield` |
 
 ## Data Types:
 - ### Primative Types (immutable datum represented diractly at the lowest level of the language.)
@@ -68,6 +68,8 @@
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type
     - **String**
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type
+        - Strings are recognized by single quotes ('string'), double quotes ("string").
+        - There are also formated strings recognized by back ticks (\`string allowing `${variables}` to be called in the string\`)
     - **Symbol**
         - a **unique** and **immutable** primitive value and may be used as the key of an Object property. In some programming languages, Symbols are called "atoms".
     - **Objects**
@@ -97,7 +99,7 @@
     - Math with strings: example(multiply "A" 500 times) `let varName = "A"*500`
 - ### Comparison Operators:
     - Equal to: `==`
-    - Equal value and Equal type: `===`
+    - Equal value and Equal type: `===` <-use this one.
     - Not Equal: `!=`
     - Not Equal value and Not Equal type: `!==`
     - Greater Than: `>`
@@ -120,3 +122,40 @@
     - Zero fill left shift: `<<`
     - Signed right shift: `>>`
     - Zero fill right shift: `>>>`
+
+## If Else Statments:
+- **Standard if else control sructure**:
+    -         if (condition) {
+                  do this
+              } else {
+                  do that
+              }
+
+- **Standart else if control structure**:
+    -         if (condition) {
+                  do this
+              } else if (condition) {
+                  do this
+              } else {
+                  do that
+              }
+
+## Booleans, Truthy and Falsy values:
+- **Falsy Values**: (will all be false when converted to boolean.)
+    - `0`
+    - `''`
+    - `undefined`
+    - `null`
+    - `NaN` (Not a Number) <-- but is actually a number.
+
+## Type Conversion and Coersion:
+- **Conversion is explicit**, meaning you have to specifically tell the code to convert a value.
+    - Example:
+        -       Number('11') <-- converts the string '11' to the number 11.
+        -       Boolean('random') <-- converst the type from string to boolean.
+- **Coersion is implicit**, meaning the conversion is implied based on the code structure.
+    - Example:
+        -       let number = '11' - 1; <-- Here due to the structure the code will interpret the output of the varable as a Number and not a String.
+
+## Get user input in popup box:
+- Use the `prompt();` function to alert an input box.
